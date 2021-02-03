@@ -20,7 +20,10 @@ export default class Questionnaire extends Component {
   render() {
     return (
       <div>
-        <QuizArea />
+        <QuizArea
+          isFinished={this.state.isFinished}
+          dataSet={this.state.dataset}
+        />
         <ScoreArea />
       </div>
     );
