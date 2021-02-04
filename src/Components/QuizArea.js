@@ -1,17 +1,19 @@
-// import React, { Component } from "react";
+import React from "react";
 import Question from "./Question";
 import AnswerList from "./AnswerList";
 import UserGreeting from "./UserGreetings";
 
 export default function QuizArea(props) {
+  // checking for finish
   if (props.isFinished) {
     return <UserGreeting />;
   }
+
   return (
     <div>
       <h2>Quiz Area</h2>
-      <Question dataset={props.dataset} />
-      <AnswerList dataset={props.dataset} />
+      <Question dataSet={props.dataSet} />
+      <AnswerList dataSet={props.dataSet} />
     </div>
   );
 }
